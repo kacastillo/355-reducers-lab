@@ -31,19 +31,3 @@ export function editorReducer(editor, action) {
         rotation: editor.rotation === 270 ? 0 : editor.rotation + 90,
       };
 
-    case "flip_toggled":
-      return { ...editor, flipped: !editor.flipped };
-
-    case "straightened":
-      return { ...editor, rotation: 0, flipped: false };
-
-    case "photo_chosen":
-      return { ...initialEditor, photo: action.photo };
-
-    case "edits_reset":
-      return { ...initialEditor, photo: editor.photo };
-
-    default:
-      throw new Error(`Unknown action: ${action.type}`);
-  }
-}
