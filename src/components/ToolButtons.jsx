@@ -10,6 +10,10 @@ function ToolButtons({ dispatch }) {
       <button type="button" onClick={() => dispatch({ type: "flip_toggled" })}>
         ⇆ Flip
       </button>
+      <button type="button" onClick={() => dispatch({ type: "straightened" })}>
+    Straighten
+    </button> 
+      
       <button
         type="button"
         className="tools-reset"
